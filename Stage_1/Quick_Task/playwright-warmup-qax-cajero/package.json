@@ -1,0 +1,16 @@
+{
+  "name": "playwright-warmup-qax-cajero",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Taller de cajero automatico y ejemplo de calculadora de cafe en TypeScript",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "calculadora": "tsx src/calculadora-cafe.ts",
+    "cajero": "tsx src/cajero.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
