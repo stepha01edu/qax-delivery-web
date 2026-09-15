@@ -1,0 +1,14 @@
+{
+  "name": "qax-pw-web-stg1-exe2",
+  "version": "1.0.0",
+  "description": "Exercise 2 - Mejorando las validaciones con arrays y ciclos en QAX Bank",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}

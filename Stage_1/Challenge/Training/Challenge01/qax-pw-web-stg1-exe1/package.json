@@ -1,0 +1,14 @@
+{
+  "name": "qax-pw-web-stg1-exe1",
+  "version": "1.0.0",
+  "description": "Exercise 1 - Primeros pasos automatizando QAX Bank con Playwright",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}
