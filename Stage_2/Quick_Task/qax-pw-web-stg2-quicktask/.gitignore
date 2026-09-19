@@ -1,0 +1,23 @@
+# Dependencias
+node_modules/
+
+# Reportes y artefactos
+playwright-report/
+test-results/
+blob-report/
+reports/
+*.log
+
+# Build / coverage
+dist/
+coverage/
+
+# Env locales (NUNCA commitear valores reales)
+.env
+.env.*
+!.env.example
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
