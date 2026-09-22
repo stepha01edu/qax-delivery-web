@@ -1,0 +1,14 @@
+{
+  "name": "qax-pw-web-stg2-quicktask",
+  "version": "1.0.0",
+  "description": "Quick Task - Localizadores y acciones avanzadas con Playwright",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}
