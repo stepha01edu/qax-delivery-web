@@ -1,0 +1,14 @@
+{
+  "name": "qax-automation-project-playwright-comportamiento-avanzados",
+  "version": "1.0.0",
+  "description": "Exercise 2 - Comportamientos avanzados en Playwright sobre QAX Forms",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}
