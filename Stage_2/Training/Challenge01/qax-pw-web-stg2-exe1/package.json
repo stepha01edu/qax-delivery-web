@@ -1,0 +1,14 @@
+{
+  "name": "qax-pw-web-stg2-exe1",
+  "version": "1.0.0",
+  "description": "Exercise 1 - Realizando un flujo completo de apuesta en QAXpert Bet",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}
