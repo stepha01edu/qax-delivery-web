@@ -1,0 +1,13 @@
+{
+  "name": "qax-pw-web-stg3-quicktask",
+  "version": "1.0.0",
+  "description": "Quick Task de aserciones y anotaciones en formularios",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}
