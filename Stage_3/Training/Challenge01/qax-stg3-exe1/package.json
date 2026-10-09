@@ -1,0 +1,17 @@
+{
+  "name": "qax-automation-project-playwright-POM",
+  "version": "1.0.0",
+  "description": "Exercise 1 - Page Object Model con Haguazon (Stage 3)",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.0",
+    "@types/node": "^26.6.3",
+    "typescript": "^5.3.0"
+  }
+}
