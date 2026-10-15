@@ -1,0 +1,170 @@
+{
+  "info": {
+    "name": "Mi Servidor Mock - Stage 4",
+    "description": "Peticiones manuales para practicar Users, Products y Orders en el servidor local.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "GET - Obtener todos los usuarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/api/users"
+          }
+        },
+        {
+          "name": "GET - Obtener usuario por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+          "url": "{{base_url}}/api/users/{{user_id}}"
+          }
+        },
+        {
+          "name": "POST - Crear usuario",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"QA User Postman\",\n  \"email\": \"qa_postman@test.com\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/users"
+          }
+        },
+        {
+          "name": "DELETE - Eliminar usuario",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{base_url}}/api/users/{{created_user_id}}"
+          }
+        },
+        {
+          "name": "GET - Usuario inexistente (404)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/api/users/999"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "GET - Obtener todos los productos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/api/products"
+          }
+        },
+        {
+          "name": "POST - Crear producto",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Teclado\",\n  \"precio\": 120000,\n  \"categoria\": \"tecnologia\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/products"
+          }
+        },
+        {
+          "name": "DELETE - Eliminar producto",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{base_url}}/api/products/{{created_product_id}}"
+          }
+        },
+        {
+          "name": "GET - Producto inexistente (404)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/api/products/999"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "GET - Obtener todas las ordenes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/api/orders"
+          }
+        },
+        {
+          "name": "POST - Crear orden",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"usuarioId\": 1,\n  \"productos\": [\n    {\n      \"id\": 1,\n      \"nombre\": \"Laptop\",\n      \"cantidad\": 1\n    }\n  ],\n  \"total\": 2500000\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/orders"
+          }
+        },
+        {
+          "name": "PUT - Actualizar estado de orden",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"estado\": \"completada\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/orders/{{order_id}}"
+          }
+        },
+        {
+          "name": "PUT - Orden inexistente (404)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"estado\": \"completada\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{base_url}}/api/orders/999"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:3000", "type": "string" },
+    { "key": "user_id", "value": "1", "type": "string" },
+    { "key": "created_user_id", "value": "3", "type": "string" },
+    { "key": "created_product_id", "value": "3", "type": "string" },
+    { "key": "order_id", "value": "1", "type": "string" }
+  ]
+}

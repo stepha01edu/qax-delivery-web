@@ -1,0 +1,16 @@
+{
+  "name": "stage-4-quick-task-mock-postman",
+  "version": "1.0.0",
+  "description": "Quick Task de Stage 4: Codegen, servidor mock y Postman",
+  "scripts": {
+    "start": "node server.js",
+    "test": "playwright test",
+    "codegen": "playwright codegen https://mercadolibre.com"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.0"
+  }
+}
